@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    
+</head>
+    <style>
+        .header {
+    background-color: rgb(127, 127, 150);
+    height: 60px;
+    
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    gap: 500px;
+    
+    }
+    .header button{
+        height:60px;
+        width:200px;
+        background-color: rgb(121, 113, 113);
+    }
+    body{
+        background-color: rgb(127, 127, 127);
+    }
+    .overall {
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 50px;
+}
+
+    .colors button {
+    padding: 15px 30px;     
+    font-size: 18px;        
+    border-radius: 8px;     
+    cursor: pointer;
+    border-width: 5px;
+}
+
+    </style>
+<body>
+    <div class="overall">
+        <nav class="header">
+            <button class="home" style="cursor: pointer">Home</button>
+            <button style="cursor: pointer">Youtube channel</button>
+        </nav>
+        <div class="colors">
+            <button class="Red">red</button>
+<button class="Blue">blue</button>
+<button class="Yellow">yellow</button>
+<button class="Green">green</button>
+
+<button class="Orange">orange</button>
+<button class="Purple">purple</button>
+<button class="Pink">pink</button>
+<button class="Brown">brown</button>
+<button class="Cyan">cyan</button>
+<button class="Magenta">magenta</button>
+<button class="Teal">teal</button>
+<button class="Indigo">indigo</button>
+<button class="Maroon">maroon</button>
+<button class="Gold">gold</button>
+<button class="Silver">silver</button>
+<button class="Lime">lime</button>
+<button class="Olive">olive</button>
+<button class="Coral">coral</button>
+<button class="Navy">navy</button>
+<button class="Turquoise">turquoise</button>
+<button class="Beige">beige</button>
+<button class="Salmon">salmon</button>
+<button class="Ivory">ivory</button>
+<button class="Chocolate">chocolate</button>
+<button class="Crimson">crimson</button>
+<button class="Lavender">lavender</button>
+<button class="Tan">tan</button>
+<button class="Azure">azure</button>
+<button class="Khaki">khaki</button>
+<button class="Mint">mint</button>
+<button class="Plum">plum</button>
+<button class="Orchid">orchid</button>
+<button class="skyblue">skyblue</button>
+<button class="slategray">slategray</button>
+<button class="steelblue">steelblue</button>
+<button class="tomato">tomato</button>
+<button class="peachpuff">peachpuff</button>
+<button class="seagreen">seagreen</button>
+<button class="aquamarine">aquamarine</button>
+<button class="darkred">darkred</button>
+<button class="darkgreen">darkgreen</button>
+<button class="darkblue">darkblue</button>
+<button class="darkorange">darkorange</button>
+<button class="darkviolet">darkviolet</button>
+<button class="lightpink">lightpink</button>
+<button class="lightgreen">lightgreen</button>
+        </div>
+
+
+
+    </div>
+</body>
+    <script>
+        const arr=document.getElementsByClassName('colors')[0];
+        console.log(arr.children)
+        const array=Array.from(arr.children)
+        array.forEach(element => {
+            element.addEventListener('click',()=>{
+                const tex=element.innerHTML;
+                document.body.style.backgroundColor=tex;
+            })
+        });
+        const home=document.getElementsByClassName('home')[0];
+        home.addEventListener('click',()=>{
+            window.location.reload(true);
+        })
+        
+    </script>
+</html>
